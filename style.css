@@ -55,6 +55,48 @@
     bottom: -5px;
     transform: translateX(-10px);
 }
+.lines__header-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 155px;
+    height: 60px;
+    background-color: #ffffffeb;
+    transform: translateX(-10px);
+    overflow: hidden;
+    border-radius: 12px;
+    padding-left: 5px;
+    opacity: 0;
+}
+.header__icons:nth-child(1):hover .lines__header-block {
+    opacity: 1;
+    transform: translateZ(1);
+}
+.lines__link:hover {
+    transform: scale(1.2);
+    color: #059ef0;
+}
+.lines__link {
+    position: relative;
+}
+.lines__link::before {
+    position: absolute;
+    content: '';
+    background-color: #0905f0;
+    width: 0%;
+    height: 5%;
+    left: 0;
+    bottom: 8px;
+    transition: 0.3s;
+}
+.lines__link:hover::before {
+    width: 100%;
+}
+.header__icons:nth-child(1) {
+    width: 18px;
+    cursor: pointer;
+}
 /* ------HEADER----------------- */
 
 
@@ -244,6 +286,19 @@
     margin-left: 570px;
     transform: translateY(-750px);
 }
-.credit__card-btn {
+.credit__card-img {
     width: 300px;
+}
+.credit__card-btn {
+    width: 180px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 16px;
+    transform: translateX(-300px);
+    background-color: #f276c2;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.credit__card-btn:hover {
+    font-size: 28px;
 }
